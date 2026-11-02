@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#092638" />
+    <meta
+      name="description"
+      content="Maré: uma experiência fictícia de cozinha do mar. Da pesca ao prato, descubra nossa história, explore o cardápio e simule sua reserva."
+    />
+    <title>Maré — Cozinha do mar</title>
+    <link
+      rel="preload"
+      href="/fonts/cormorant-garamond.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <svg class="svg-defs" aria-hidden="true">
+      <defs>
+        <symbol id="arrow" viewBox="0 0 24 16">
+          <path d="M1 8h21M15 1l7 7-7 7" />
+        </symbol>
+        <symbol id="anchor" viewBox="0 0 24 24">
+          <circle cx="12" cy="4" r="2" />
+          <path
+            d="M12 6v15M8 10h8M3 14c0 9 18 9 18 0M1 16l2-2 3 2M18 16l3-2 2 2"
+          />
+        </symbol>
+      </defs>
+    </svg>
+    <a class="skip" href="#historia">Pular para o conteúdo</a>
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="titulo">
+        <img
+          class="hero-image scene-image"
+          src="/pesca-1600.webp"
+          srcset="/pesca-800.webp 800w, /pesca-1600.webp 1600w"
+          sizes="100vw"
+          alt=""
+          width="1672"
+          height="941"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="hero-wash"></div>
+        <header class="header" role="banner">
+          <a class="brand" href="#inicio" aria-label="Maré, início"
+            ><svg viewBox="0 0 110 19" aria-hidden="true">
+              <path d="M2 10C20 28 30-8 54 6s28 14 52 3" /></svg
+            ><span>MARÉ</span><small>COZINHA DO MAR</small></a
+          >
+          <nav aria-label="Navegação principal">
+            <a href="#historia">Nossa história</a
+            ><a href="%BASE_URL%cardapio/">Cardápio</a><a href="#cozinha">Experiências</a
+            ><a href="#reserva">Reservas</a>
+          </nav>
+          <a class="outline-button" href="#reserva">Reserve sua mesa</a>
+        </header>
+        <div class="hero-content">
+          <h1 id="titulo">Do mar<br />à mesa</h1>
+          <p class="spaced">Histórias do mar.<br />Sabores extraordinários.</p>
+          <p class="hero-description">
+            Ingredientes do nosso litoral,<br />pessoas que vivem o mar, uma
+            cozinha<br />que celebra o Brasil.
+          </p>
+        </div>
+
+        <a class="journey-link" href="#historia"
+          ><span class="anchor-icon"
+            ><svg><use href="#anchor" /></svg></span
+          >Descubra essa jornada</a
+        >
+        <span class="scroll-cue" aria-hidden="true"
+          >Role para mergulhar
+          <svg viewBox="0 0 20 32" width="16" height="28" aria-hidden="true">
+            <path d="M10 1v28M3 22l7 7 7-7" /></svg
+        ></span>
+      </section>
+      <section class="ocean" id="historia" aria-labelledby="ocean-title">
+        <svg
+          class="waterline"
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path class="wave-back" d="M0 44Q360 100 720 40T1440 40V100H0Z" />
+          <path
+            class="wave-front"
+            d="M0 60Q360 110 720 60T1440 45V100H0Z"
+          /></svg
+        ><img
+          class="underwater-image scene-image"
+          src="/oceano-1600.webp"
+          srcset="/oceano-800.webp 800w, /oceano-1600.webp 1600w"
+          sizes="100vw"
+          alt=""
+          width="1672"
+          height="941"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="ocean-shade"></div>
+        <canvas id="ocean-particles" aria-hidden="true"></canvas>
+        <div class="light-ray ray-one" aria-hidden="true"></div>
+        <div class="light-ray ray-two" aria-hidden="true"></div>
+        <div class="ocean-content">
+          <h2 id="ocean-title">Do oceano<br />à nossa cozinha</h2>
+          <p>
+            Do trabalho dos pescadores ao cuidado<br class="desktop-break" />
+            na escolha de cada ingrediente, seguimos<br class="desktop-break" />
+            um caminho de respeito, frescor e propósito.<br
+              class="desktop-break"
+            />
+            É o mar que guia o nosso cardápio.
+          </p>
+          <a class="outline-button" href="#cozinha"
+            >Conheça nossa história
+            <svg class="arrow"><use href="#arrow" /></svg
+          ></a>
+        </div>
+        <div class="story-progress" aria-hidden="true">
+          <span class="active">O mar</span><span>As pessoas</span
+          ><span>A cozinha</span><span>O sabor</span>
+        </div>
+        <img
+          class="coral coral-ocean"
+          src="/coral-640.webp"
+          srcset="/coral-320.webp 320w, /coral-640.webp 640w"
+          sizes="(max-width:600px) 34vw,26vw"
+          decoding="async"
+          alt=""
+          width="220"
+          height="320"
+          loading="lazy"
+        />
+      </section>
+      <section class="kitchen" id="cozinha" aria-labelledby="kitchen-title">
+        <img
+          class="chef-image"
+          src="/cozinheiro-960.webp"
+          srcset="/cozinheiro-480.webp 480w, /cozinheiro-960.webp 960w"
+          sizes="(max-width:600px) 100vw,43vw"
+          alt="Cozinheiro finalizando um prato na cozinha"
+          width="1086"
+          height="1448"
+          loading="lazy"
+          decoding="async"
+        /><img
+          class="coral coral-kitchen"
+          src="/coral-640.webp"
+          srcset="/coral-320.webp 320w, /coral-640.webp 640w"
+          sizes="(max-width:600px) 34vw,26vw"
+          decoding="async"
+          alt=""
+          width="220"
+          height="320"
+          loading="lazy"
+        />
+        <div class="kitchen-copy">
+          <h2 id="kitchen-title">Tradição<br />que inspira<br />o presente</h2>
+          <p>
+            Receitas brasileiras, técnica<br class="desktop-break" />
+            contemporânea e o melhor do<br class="desktop-break" />
+            nosso mar. Uma cozinha que honra<br class="desktop-break" />
+            a origem e olha para o futuro.
+          </p>
+          <svg class="little-wave" viewBox="0 0 80 15" aria-hidden="true">
+            <path d="M0 8Q10 0 20 8T40 8T60 8T80 8" />
+          </svg>
+          <p class="spaced">Saboreie com alma brasileira</p>
+        </div>
+        <div class="featured-plate">
+          <img
+            src="/prato-recortado-1000.webp"
+            srcset="
+              /prato-recortado-640.webp   640w,
+              /prato-recortado-1000.webp 1000w
+            "
+            sizes="(max-width:600px) 65vw,44vw"
+            decoding="async"
+            alt="Polvo grelhado com batatas, tomates e ervas"
+            width="1254"
+            height="1254"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <section class="menu-section" id="cardapio" aria-labelledby="menu-title">
+        <div class="menu-heading">
+          <div>
+            <h2 id="menu-title">Cardápio</h2>
+            <p class="spaced">O mar em diferentes histórias.</p>
+            <p>
+              Pratos que celebram a riqueza do nosso litoral, com ingredientes
+              frescos,<br class="desktop-break" />
+              toques brasileiros e muita personalidade.
+            </p>
+          </div>
+          <a class="text-link" href="%BASE_URL%cardapio/"
+            >Ver cardápio completo <svg class="arrow"><use href="#arrow" /></svg
+          ></a>
+        </div>
+        <div class="menu-list" id="menu-items">
+          <article class="menu-item">
+            <div class="dish-window">
+              <img
+                src="/ceviche-800.webp"
+                srcset="/ceviche-400.webp 400w, /ceviche-800.webp 800w"
+                sizes="(max-width:600px) 45vw,23vw"
+                decoding="async"
+                alt="Ceviche de peixe branco com limão e coentro"
+                width="1254"
+                height="1254"
+                loading="lazy"
+              />
+            </div>
+            <h3>Ceviche de robalo</h3>
+            <p>
+              Robalo fresco, leite de coco, limão,<br />
+              coentro e pimenta dedo-de-moça.
+            </p>
+            <span class="price">R$ 68 <span></span></span>
+          </article>
+          <article class="menu-item">
+            <div class="dish-window">
+              <img
+                src="/camarao-800.webp"
+                srcset="/camarao-400.webp 400w, /camarao-800.webp 800w"
+                sizes="(max-width:600px) 45vw,23vw"
+                decoding="async"
+                alt="Camarões grelhados e limões na brasa"
+                width="1254"
+                height="1254"
+                loading="lazy"
+              />
+            </div>
+            <h3>Camarões na brasa</h3>
+            <p>
+              Camarões do litoral, manteiga<br />
+              de ervas e limão siciliano.
+            </p>
+            <span class="price">R$ 86 <span></span></span>
+          </article>
+          <article class="menu-item">
+            <div class="dish-window">
+              <img
+                src="/peixe-800.webp"
+                srcset="/peixe-400.webp 400w, /peixe-800.webp 800w"
+                sizes="(max-width:600px) 45vw,23vw"
+                decoding="async"
+                alt="Peixe grelhado com arroz cremoso"
+                width="1254"
+                height="1254"
+                loading="lazy"
+              />
+            </div>
+            <h3>Peixe do dia</h3>
+            <p>
+              Peixe fresco grelhado, risoto<br />
+              de limão e castanhas.
+            </p>
+            <span class="price">R$ 78 <span></span></span>
+          </article>
+          <article class="menu-item">
+            <div class="dish-window">
+              <img
+                src="/polvo-800.webp"
+                srcset="/polvo-400.webp 400w, /polvo-800.webp 800w"
+                sizes="(max-width:600px) 45vw,23vw"
+                decoding="async"
+                alt="Polvo grelhado com batatas douradas"
+                width="1024"
+                height="1536"
+                loading="lazy"
+              />
+            </div>
+            <h3>Polvo grelhado</h3>
+            <p>
+              Polvo, batata-doce, chimichurri<br />
+              de coentro e azeite de pimenta.
+            </p>
+            <span class="price">R$ 92 <span></span></span>
+          </article>
+        </div>
+        <p class="fiction-note">Cardápio e preços ilustrativos.</p>
+      </section>
+      <section
+        class="reservation"
+        id="reserva"
+        aria-labelledby="reservation-title"
+      >
+        <img
+          class="terrace-image scene-image"
+          src="/varanda-1600.webp"
+          srcset="/varanda-800.webp 800w, /varanda-1600.webp 1600w"
+          sizes="100vw"
+          alt=""
+          width="1672"
+          height="941"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="terrace-shade"></div>
+        <img
+          class="coral coral-reservation"
+          src="/coral-640.webp"
+          srcset="/coral-320.webp 320w, /coral-640.webp 640w"
+          sizes="(max-width:600px) 34vw,26vw"
+          decoding="async"
+          alt=""
+          width="220"
+          height="320"
+          loading="lazy"
+        />
+        <div class="reservation-copy">
+          <h2 id="reservation-title">Reserve<br />sua mesa</h2>
+          <p class="spaced">
+            Boa comida, grandes encontros.<br />Vistas inesquecíveis.
+          </p>
+          <p>
+            Venha viver essa experiência à beira-mar.<br />Nossa próxima
+            história começa com você.
+          </p>
+          <button
+            class="gold-button"
+            id="open-reservation"
+            aria-expanded="false"
+            aria-controls="reservation-panel"
+          >
+            Fazer reserva <svg class="arrow"><use href="#arrow" /></svg>
+          </button>
+        </div>
+      </section>
+      <section class="reservation-panel" id="reservation-panel" hidden>
+        <div>
+          <h2>Seu encontro<br />com o mar.</h2>
+          <p>
+            Experimente fazer uma reserva.<br />Este restaurante é fictício e
+            nenhuma reserva real será efetuada.
+          </p>
+        </div>
+        <form id="reservation-form">
+          <div class="form-grid">
+            <label
+              >Seu nome<input
+                name="nome"
+                autocomplete="name"
+                required
+                minlength="2"
+                placeholder="Como podemos chamar você?" /></label
+            ><label>Data<input name="data" type="date" required /></label
+            ><label
+              >Horário<select name="horario" required>
+                <option value="">Selecione</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+              </select></label
+            ><label
+              >Pessoas<select name="pessoas" required>
+                <option value="">Selecione</option>
+                <option>1 pessoa</option>
+                <option>2 pessoas</option>
+                <option>3 pessoas</option>
+                <option>4 pessoas</option>
+                <option>5 pessoas</option>
+                <option>6 pessoas</option>
+              </select></label
+            >
+          </div>
+          <button class="gold-button" type="submit">
+            Simular reserva <svg class="arrow"><use href="#arrow" /></svg>
+          </button>
+          <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-top">
+        <a class="brand" href="#inicio" aria-label="Maré, início"
+          ><svg viewBox="0 0 110 19" aria-hidden="true">
+            <path d="M2 10C20 28 30-8 54 6s28 14 52 3" /></svg
+          ><span>MARÉ</span><small>COZINHA DO MAR</small></a
+        >
+        <nav aria-label="Navegação do rodapé">
+          <a href="#historia">Nossa história</a><a href="%BASE_URL%cardapio/">Cardápio</a
+          ><a href="#cozinha">Experiências</a><a href="#reserva">Reservas</a>
+        </nav>
+        <a href="#inicio" class="back-top">Voltar ao início ↑</a>
+      </div>
+      <div class="footer-bottom">
+        <span>Restaurante fictício · Projeto de portfólio</span
+        ><span>Onde o mar sempre traz boas histórias.</span>
+      </div>
+    </footer>
+  </body>
+</html>

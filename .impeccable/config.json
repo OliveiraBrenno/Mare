@@ -1,0 +1,25 @@
+{
+  "buildPath": "comp",
+  "hook": {
+    "enabled": true,
+    "limits": {
+      "maxFindings": 5,
+      "maxChars": 8000
+    }
+  },
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-02T04:23:07.236Z",
+        "reason": "User approved warm cream surface in assets/composicao-inicial.png and explicitly requested faithful reproduction"
+      }
+    ]
+  }
+}

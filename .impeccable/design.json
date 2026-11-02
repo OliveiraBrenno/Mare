@@ -1,0 +1,709 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02",
+  "title": "Design System: Maré",
+  "extensions": {
+    "visualAuthority": "assets/composicao-inicial.png",
+    "sources": [
+      "PRODUCT.md",
+      "index.html",
+      "src/style.css",
+      "src/main.js"
+    ],
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Azul profundo",
+        "tonalRamp": [
+          "oklch(15% 0.013 240)",
+          "oklch(27% 0.027 240)",
+          "oklch(39% 0.038 240)",
+          "oklch(51% 0.045 240)",
+          "oklch(63% 0.045 240)",
+          "oklch(75% 0.036 240)",
+          "oklch(87% 0.020 240)",
+          "oklch(95% 0.007 240)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Creme de areia",
+        "tonalRamp": [
+          "oklch(15% 0.011 85)",
+          "oklch(27% 0.021 85)",
+          "oklch(39% 0.030 85)",
+          "oklch(51% 0.035 85)",
+          "oklch(63% 0.035 85)",
+          "oklch(75% 0.028 85)",
+          "oklch(87% 0.016 85)",
+          "oklch(95% 0.005 85)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Dourado solar",
+        "tonalRamp": [
+          "oklch(15% 0.045 85)",
+          "oklch(27% 0.090 85)",
+          "oklch(39% 0.128 85)",
+          "oklch(51% 0.150 85)",
+          "oklch(63% 0.150 85)",
+          "oklch(75% 0.120 85)",
+          "oklch(87% 0.068 85)",
+          "oklch(95% 0.022 85)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "coral": {
+        "role": "secondary",
+        "displayName": "Coral costeiro",
+        "tonalRamp": [
+          "oklch(15% 0.039 35)",
+          "oklch(27% 0.078 35)",
+          "oklch(39% 0.111 35)",
+          "oklch(51% 0.130 35)",
+          "oklch(63% 0.130 35)",
+          "oklch(75% 0.104 35)",
+          "oklch(87% 0.059 35)",
+          "oklch(95% 0.019 35)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "ocean": {
+        "role": "secondary",
+        "displayName": "Azul submerso",
+        "tonalRamp": [
+          "oklch(15% 0.018 240)",
+          "oklch(27% 0.036 240)",
+          "oklch(39% 0.051 240)",
+          "oklch(51% 0.060 240)",
+          "oklch(63% 0.060 240)",
+          "oklch(75% 0.048 240)",
+          "oklch(87% 0.027 240)",
+          "oklch(95% 0.009 240)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "wave-front": {
+        "role": "secondary",
+        "displayName": "Onda frontal",
+        "tonalRamp": [
+          "oklch(15% 0.021 235)",
+          "oklch(27% 0.042 235)",
+          "oklch(39% 0.060 235)",
+          "oklch(51% 0.070 235)",
+          "oklch(63% 0.070 235)",
+          "oklch(75% 0.056 235)",
+          "oklch(87% 0.032 235)",
+          "oklch(95% 0.011 235)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "wave-back": {
+        "role": "secondary",
+        "displayName": "Onda posterior",
+        "tonalRamp": [
+          "oklch(15% 0.030 225)",
+          "oklch(27% 0.060 225)",
+          "oklch(39% 0.085 225)",
+          "oklch(51% 0.100 225)",
+          "oklch(63% 0.100 225)",
+          "oklch(75% 0.080 225)",
+          "oklch(87% 0.045 225)",
+          "oklch(95% 0.015 225)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "footer": {
+        "role": "neutral",
+        "displayName": "Azul de rodapé",
+        "tonalRamp": [
+          "oklch(15% 0.013 240)",
+          "oklch(27% 0.027 240)",
+          "oklch(39% 0.038 240)",
+          "oklch(51% 0.045 240)",
+          "oklch(63% 0.045 240)",
+          "oklch(75% 0.036 240)",
+          "oklch(87% 0.020 240)",
+          "oklch(95% 0.007 240)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "form-surface": {
+        "role": "neutral",
+        "displayName": "Areia de formulário",
+        "tonalRamp": [
+          "oklch(15% 0.012 85)",
+          "oklch(27% 0.024 85)",
+          "oklch(39% 0.034 85)",
+          "oklch(51% 0.040 85)",
+          "oklch(63% 0.040 85)",
+          "oklch(75% 0.032 85)",
+          "oklch(87% 0.018 85)",
+          "oklch(95% 0.006 85)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "gold-hover": {
+        "role": "primary",
+        "displayName": "Dourado iluminado",
+        "tonalRamp": [
+          "oklch(15% 0.042 85)",
+          "oklch(27% 0.084 85)",
+          "oklch(39% 0.119 85)",
+          "oklch(51% 0.140 85)",
+          "oklch(63% 0.140 85)",
+          "oklch(75% 0.112 85)",
+          "oklch(87% 0.063 85)",
+          "oklch(95% 0.021 85)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      },
+      "focus": {
+        "role": "functional",
+        "displayName": "Terracota de foco",
+        "tonalRamp": [
+          "oklch(15% 0.036 40)",
+          "oklch(27% 0.072 40)",
+          "oklch(39% 0.102 40)",
+          "oklch(51% 0.120 40)",
+          "oklch(63% 0.120 40)",
+          "oklch(75% 0.096 40)",
+          "oklch(87% 0.054 40)",
+          "oklch(95% 0.018 40)"
+        ],
+        "rampPurpose": "Rampa derivada para exploração; não adiciona cores normativas ao CSS."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Título editorial",
+        "purpose": "Abertura da narrativa."
+      },
+      "headline": {
+        "displayName": "Título de cena",
+        "purpose": "História, cozinha, cardápio e reserva."
+      },
+      "body": {
+        "displayName": "Texto funcional",
+        "purpose": "Parágrafos, descrições e formulário."
+      },
+      "label": {
+        "displayName": "Legenda espaçada",
+        "purpose": "Frases de apoio em caixa alta; piso funcional de 11px em todos os tamanhos de tela."
+      }
+    },
+    "shadows": [
+      {
+        "name": "featured-plate",
+        "value": "drop-shadow(0 15px 18px #00000022)",
+        "property": "filter",
+        "purpose": "Sombra ambiente no contorno alfa da imagem do prato em destaque."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Setas, imagens e movimentos de hover."
+      },
+      {
+        "name": "interaction-duration",
+        "value": "300ms",
+        "purpose": "Ações, navegação e setas."
+      },
+      {
+        "name": "menu-image-duration",
+        "value": "1000ms",
+        "purpose": "Ampliação de fotografia no hover."
+      },
+      {
+        "name": "scroll-scrub",
+        "value": {
+          "duration": 1000,
+          "fill": "both",
+          "easing": "linear",
+          "progress": "clamp((viewportHeight - sectionTop) / (viewportHeight + sectionHeight), 0, 1)",
+          "currentTime": "clamp((progress-start)/(end-start),0,1)*1000"
+        },
+        "purpose": "Animações WAAPI pausadas e dirigidas pela rolagem."
+      },
+      {
+        "name": "hero-image",
+        "value": {
+          "selector": ".hero-image",
+          "section": "hero",
+          "start": 0.48,
+          "end": 1,
+          "keyframes": [
+            {
+              "transform": "scale(1)"
+            },
+            {
+              "transform": "translateY(160px) scale(1.15)"
+            }
+          ]
+        },
+        "purpose": "Contrato atual de rolagem."
+      },
+      {
+        "name": "hero-content",
+        "value": {
+          "selector": ".hero-content",
+          "section": "hero",
+          "start": 0.62,
+          "end": 1,
+          "keyframes": [
+            {
+              "transform": "translateY(0)",
+              "opacity": 1
+            },
+            {
+              "transform": "translateY(-100px)",
+              "opacity": 0.1
+            }
+          ]
+        },
+        "purpose": "Contrato atual de rolagem."
+      },
+      {
+        "name": "underwater-image",
+        "value": {
+          "selector": ".underwater-image",
+          "section": "ocean",
+          "start": 0,
+          "end": 1,
+          "keyframes": [
+            {
+              "transform": "scale(1.2) translateX(-3%)"
+            },
+            {
+              "transform": "scale(1.06) translateX(2%)"
+            }
+          ]
+        },
+        "purpose": "Contrato atual de rolagem."
+      },
+      {
+        "name": "ocean-content",
+        "value": {
+          "selector": ".ocean-content",
+          "section": "ocean",
+          "start": 0.03,
+          "end": 0.88,
+          "keyframes": [
+            {
+              "transform": "translateY(65px)",
+              "opacity": 0
+            },
+            {
+              "transform": "translateY(0)",
+              "opacity": 1,
+              "offset": 0.48
+            },
+            {
+              "transform": "translateY(-35px)",
+              "opacity": 1
+            }
+          ]
+        },
+        "purpose": "Contrato atual de rolagem."
+      },
+      {
+        "name": "chef-image",
+        "value": {
+          "selector": ".chef-image",
+          "section": "kitchen",
+          "start": 0,
+          "end": 0.8,
+          "keyframes": [
+            {
+              "transform": "scale(1.12) translateX(-3%)"
+            },
+            {
+              "transform": "scale(1) translateX(0)"
+            }
+          ]
+        },
+        "purpose": "Contrato atual de rolagem."
+      },
+      {
+        "name": "kitchen-copy",
+        "value": {
+          "selector": ".kitchen-copy",
+          "section": "kitchen",
+          "start": 0,
+          "end": 1,
+          "keyframes": [
+            {
+              "transform": "translateY(65px)"
+            },
+            {
+              "transform": "translateY(-25px)"
+            }
+          ]
+        },
+        "purpose": "Contrato atual de rolagem."
+      },
+      {
+        "name": "featured-plate",
+        "value": {
+          "selector": ".featured-plate",
+          "section": "kitchen",
+          "start": 0,
+          "end": 1,
+          "keyframes": [
+            {
+              "transform": "translateX(80px) rotate(-16deg)"
+            },
+            {
+              "transform": "translateX(-20px) rotate(10deg)"
+            }
+          ]
+        },
+        "purpose": "Contrato atual de rolagem."
+      },
+      {
+        "name": "terrace-image",
+        "value": {
+          "selector": ".terrace-image",
+          "section": "reservation",
+          "start": 0,
+          "end": 1,
+          "keyframes": [
+            {
+              "transform": "scale(1.16) translateY(-30px)"
+            },
+            {
+              "transform": "scale(1.02) translateY(30px)"
+            }
+          ]
+        },
+        "purpose": "Contrato atual de rolagem."
+      },
+      {
+        "name": "scheduler",
+        "value": {
+          "scroll": "event-driven requestAnimationFrame, stable containers, batch reads then writes",
+          "ambient": "only ocean visible, page active, motion enabled; canceled outside scene",
+          "pause": "persistent manual pause cancels scrub; static content visible",
+          "reducedMotion": "no spatial motion; color/focus feedback retained",
+          "menu": "scrub stable menu-list container, not transformed items"
+        }
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "header-compact",
+        "value": "1100px",
+        "condition": "max-width"
+      },
+      {
+        "name": "mobile",
+        "value": "600px",
+        "condition": "max-width"
+      },
+      {
+        "name": "tablet",
+        "value": "850px",
+        "condition": "max-width"
+      },
+      {
+        "name": "wide",
+        "value": "1600px",
+        "condition": "min-width"
+      }
+    ],
+    "focus": {
+      "value": "2px solid #b85a37",
+      "offset": "5px",
+      "appliesTo": [
+        "a",
+        "button",
+        "input",
+        "select"
+      ]
+    },
+    "featuredPlate": {
+      "asset": "/prato-recortado-1000.webp",
+      "transparency": "canal alfa real; preservar contorno da imagem",
+      "container": {
+        "width": "44%",
+        "aspectRatio": "1",
+        "height": "auto",
+        "left": "74%",
+        "top": "14%",
+        "overflow": "visible"
+      },
+      "image": {
+        "objectFit": "contain",
+        "filter": "drop-shadow(0 15px 18px #00000022)"
+      },
+      "mobile": {
+        "maxWidth": "600px",
+        "width": "65%",
+        "left": "73%",
+        "top": "auto",
+        "bottom": "70px",
+        "opacity": 0.95
+      },
+      "cssEllipseMask": false
+    },
+    "mobileHeroWash": {
+      "maxWidth": "600px",
+      "background": "linear-gradient(90deg,#fff0cde6 0%,#fff0cda8 52%,transparent 100%)",
+      "purpose": "Manter texto azul legível sobre a fotografia do amanhecer."
+    },
+    "tokens": {
+      "colors": {
+        "navy": "#092638",
+        "cream": "#f6efdf",
+        "gold": "#f1b633",
+        "coral": "#cd684b",
+        "scrollbar-thumb": "#b99659",
+        "focus": "#b85a37",
+        "hover-wash": "#ffffff22",
+        "sunrise-wash": "#f9e9be55",
+        "ocean": "#073048",
+        "wave-back": "#0b7b9d",
+        "wave-front": "#073f59",
+        "ocean-shade-strong": "#042538f2",
+        "ocean-shade-middle": "#042538a8",
+        "ocean-shade-clear": "#04253805",
+        "ocean-shade-bottom": "#062b3d88",
+        "journey-line": "#d7e7eb66",
+        "journey-text": "#e9eee9",
+        "journey-dot": "#b8d3de",
+        "light-ray": "#b2e8f51c",
+        "mask-solid": "#000",
+        "ornament-gold": "#cc9b3b",
+        "plate-shadow": "#00000022",
+        "link-rule": "#be964d",
+        "image-placeholder": "#e7ddc9",
+        "price-rule": "#b69454",
+        "muted-text": "#766647",
+        "terrace-shade-strong": "#062332d9",
+        "terrace-shade-bottom": "#072738a6",
+        "gold-hover": "#ffcc58",
+        "form-surface": "#eee4d0",
+        "input-rule": "#a79b84",
+        "caret": "#ac6d32",
+        "placeholder": "#6c6354",
+        "footer": "#092536",
+        "footer-rule": "#b8ccd055",
+        "mobile-sunrise-strong": "#fff0cde6",
+        "mobile-sunrise-middle": "#fff0cda8",
+        "mobile-ocean-strong": "#042538ef",
+        "mobile-ocean-middle": "#04253855",
+        "mobile-ocean-bottom": "#04253866",
+        "mobile-journey-line": "#ffffff66",
+        "mobile-terrace-strong": "#062332e6",
+        "mobile-terrace-clear": "#06233220",
+        "mobile-terrace-bottom": "#09263888"
+      },
+      "typeSizes": [
+        11,
+        12,
+        13,
+        14,
+        20,
+        21,
+        24,
+        25,
+        30,
+        36,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        61,
+        62,
+        65,
+        70,
+        76,
+        80,
+        90,
+        112
+      ],
+      "bubbleStroke": "rgba(207,237,239,0.3)"
+    },
+    "assetPipeline": {
+      "command": "npm run optimize:images",
+      "sources": "assets/source",
+      "format": "WebP",
+      "widths": {
+        "scene": [
+          800,
+          1600
+        ],
+        "chef": [
+          480,
+          960
+        ],
+        "dish": [
+          400,
+          800
+        ],
+        "coral": [
+          320,
+          640
+        ],
+        "featuredPlate": [
+          640,
+          1000
+        ]
+      },
+      "fonts": "public/fonts/*.woff2, local OFL copies",
+      "loading": "hero eager/fetchpriority=high; lower images lazy; srcset/sizes"
+    },
+    "responsiveAuditFixes": {
+      "headerCompactUntil": "1100px",
+      "mobileHeader": "in flow inside hero, can wrap; wordmark kept whole",
+      "touchMinimum": "44px",
+      "heroHeight": "minimum with flow content; grows with text",
+      "oceanHeight": "minimum with flow content",
+      "journeyIndicators": "4-column wrapping grid below 850px",
+      "kitchen": "flow-based text growth at 601–850px; stacked <=600px"
+    },
+    "legibilityUpdate": {
+      "heroNote": "Removed redundant tagline per composition review",
+      "storyProgress": {
+        "background": "transparent",
+        "color": "{colors.cream}",
+        "activeColor": "{colors.gold}",
+        "contrast": "continuous right-hand photographic shade; bottom shade on mobile"
+      },
+      "motionControl": "Removed per user request; reduced motion remains"
+    },
+    "sceneLayout": {
+      "hero": {
+        "minHeight": "100svh",
+        "layout": "grid: header in flow + content",
+        "bottomInset": "88px, short desktop64px, mobile72px",
+        "title": "fluid with viewport height and width"
+      },
+      "ocean": {
+        "overflow": "hidden",
+        "wave": "26px at top inside scene",
+        "image": "clipped to own section"
+      },
+      "verifiedViewports": [
+        "1996x1058",
+        "1440x760",
+        "1280x680",
+        "1140x604",
+        "1024x600",
+        "390x844"
+      ],
+      "journeyAction": {
+        "parent": "hero",
+        "position": "absolute",
+        "bottom": "64px",
+        "left": "8%, mobile7%",
+        "reservedBottomPadding": "144px, mobile156px",
+        "verifiedMinimumBottomGap": "48px during entrance animation"
+      }
+    },
+    "catalog": {
+      "route": "/cardapio/",
+      "categories": 7,
+      "dishes": 35,
+      "layout": "editorial intro; desktop category sidebar and menu list; native horizontal category scroll on mobile",
+      "search": "case/diacritic-insensitive AND-token match, category intersection, URL state, live count, empty reset",
+      "palette": "inherited cream/navy/gold",
+      "fonts": "inherited Cormorant Garamond/DM Sans"
+    },
+    "motionUpdate": {
+      "intro": "1000ms clip-path title reveal, 750ms description/action follow; canceled offscreen",
+      "ocean": "scale1.35 translateX-7% to scale1.08 translateX5%",
+      "plate": "rotate -28deg to22deg",
+      "cue": "1.8s loop only while hero visible",
+      "reducedMotion": "system preference retained"
+    }
+  },
+  "components": [
+    {
+      "name": "Reserva — ação principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Botão dourado para abrir ou confirmar a simulação.",
+      "html": "<button class=\"ds-primary\">Fazer reserva <svg viewBox=\"0 0 24 16\" width=\"25\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" aria-hidden=\"true\"><path d=\"M1 8h21M15 1l7 7-7 7\"/></svg></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;border:0;border-radius:25px;padding:14px 25px;background:var(--gold,#f1b633);color:var(--navy,#092638);font:700 11px \"DM Sans\",sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:background .3s,transform .3s}.ds-primary:hover{background:#ffcc58;transform:translateY(-2px)}.ds-primary:active{transform:translateY(0)}.ds-primary:focus-visible{outline:2px solid #b85a37;outline-offset:5px}"
+    },
+    {
+      "name": "Ação com contorno",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Ação secundária que herda a cor da superfície.",
+      "html": "<a class=\"ds-outline\" href=\"#historia\">Conheça nossa história <svg viewBox=\"0 0 24 16\" width=\"25\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" aria-hidden=\"true\"><path d=\"M1 8h21M15 1l7 7-7 7\"/></svg></a>",
+      "css": ".ds-outline{display:inline-flex;align-items:center;gap:24px;border:1px solid currentColor;border-radius:30px;padding:12px 24px;color:var(--navy,#092638);background:transparent;text-decoration:none;font:700 11px \"DM Sans\",sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:background .3s}.ds-outline:hover{background:#ffffff22}.ds-outline svg{transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-outline:hover svg{transform:translateX(5px)}.ds-outline:focus-visible{outline:2px solid #b85a37;outline-offset:5px}"
+    },
+    {
+      "name": "Campo de reserva",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo plano com rótulo persistente e borda inferior.",
+      "html": "<label class=\"ds-label\">Seu nome<input class=\"ds-input\" autocomplete=\"name\" placeholder=\"Como podemos chamar você?\"></label>",
+      "css": ".ds-label{display:grid;gap:8px;color:var(--navy,#092638);font:600 12px \"DM Sans\",sans-serif}.ds-input{height:45px;width:100%;border:0;border-bottom:1px solid #a79b84;border-radius:0;background:transparent;padding:0 4px;color:var(--navy,#092638);font:400 14px \"DM Sans\",sans-serif;caret-color:#ac6d32}.ds-input::placeholder{color:#6c6354}.ds-input:hover{border-bottom-color:var(--navy,#092638)}.ds-input:focus-visible{outline:2px solid #b85a37;outline-offset:5px}"
+    },
+    {
+      "name": "Navegação editorial",
+      "kind": "nav",
+      "description": "Links em caixa alta e sublinhado revelado no hover.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Exemplo de navegação\"><a href=\"#historia\">Nossa história</a><a href=\"#cardapio\">Cardápio</a><a href=\"#reserva\">Reservas</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:30px;color:var(--navy,#092638);font:700 11px \"DM Sans\",sans-serif;letter-spacing:.15em;text-transform:uppercase}.ds-nav a{position:relative;color:inherit;text-decoration:none}.ds-nav a:after{content:\"\";position:absolute;bottom:-5px;left:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s}.ds-nav a:hover:after{transform:scaleX(1)}.ds-nav a:focus-visible{outline:2px solid #b85a37;outline-offset:5px}"
+    },
+    {
+      "name": "Item de cardápio",
+      "kind": "card",
+      "refersTo": "menu-item",
+      "description": "Bloco plano de título, descrição e preço; a fotografia é adicionada no site com o ativo final.",
+      "html": "<article class=\"ds-dish\"><h3>Peixe do dia</h3><p>Peixe fresco grelhado, risoto de limão e castanhas.</p><span class=\"ds-price\">R$ 78 <span></span></span></article>",
+      "css": ".ds-dish{max-width:280px;background:var(--cream,#f6efdf);color:var(--navy,#092638);padding:14px;font-family:\"DM Sans\",sans-serif}.ds-dish h3{margin:0 0 6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.16em}.ds-dish p{font-size:12px;line-height:1.7;margin:0}.ds-price{display:flex;align-items:center;gap:16px;margin-top:14px;font-size:11px;letter-spacing:.1em;font-weight:700}.ds-price span{width:28px;height:1px;background:#b69454}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Da pesca ao prato",
+    "overview": "Maré traduz a jornada da pesca ao prato em uma experiência editorial de litoral brasileiro. Fotografia de sol, mar, pessoas e comida ocupa grandes superfícies; títulos serifados e legendas espaçadas dão ritmo à narrativa. A identidade combina a leveza da manhã, a profundidade do oceano e o calor de uma mesa ao pôr do sol.",
+    "keyCharacteristics": [
+      "Fotografia contínua, com transições orgânicas entre cenas.",
+      "Contraste entre azul profundo e creme quente.",
+      "Serifas expressivas, texto funcional discreto e uma anotação manuscrita.",
+      "Movimento ligado à rolagem, com versão estática completa."
+    ],
+    "rules": [
+      {
+        "name": "A superfície conduz o contraste",
+        "body": "Use azul profundo sobre fotografias claras e creme sobre as cenas submersas e de pôr do sol. Preserve uma área legível para cada bloco de texto.",
+        "section": "colors"
+      },
+      {
+        "name": "A fotografia tem profundidade",
+        "body": "Reserve sombra para o prato em destaque; os demais blocos ganham profundidade com sobreposição, recorte e mudança de superfície.",
+        "section": "elevation"
+      },
+      {
+        "name": "O conteúdo sobrevive ao movimento",
+        "body": "A animação acompanha a narrativa; títulos, pratos, navegação e reserva devem funcionar integralmente em estado estático.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preservar a composição aprovada em assets/composicao-inicial.png e adaptar seu ritmo ao tamanho da tela.",
+      "Do usar imagens finais de pesca, oceano, cozinheiro, pratos e varanda com recortes intencionais.",
+      "Do manter conteúdo, navegação, cardápio e formulário acessíveis com movimento reduzido.",
+      "Do comunicar junto ao cardápio e à reserva que a experiência é fictícia."
+    ],
+    "donts": [
+      "Don't inverter o hero claro para uma abertura escura com texto branco.",
+      "Don't transformar o cardápio em cartões arredondados com sombras.",
+      "Don't ocultar texto ou ações quando a animação está desativada.",
+      "Don't ampliar o uso de Caveat além de pequenas anotações editoriais."
+    ]
+  }
+}

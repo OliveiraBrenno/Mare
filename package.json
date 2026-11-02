@@ -1,0 +1,26 @@
+{
+  "name": "mare-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/*.js",
+    "format": "prettier --write .",
+    "test": "playwright test",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "generate:menu": "node scripts/generate-menu.mjs",
+    "build:pages": "vite build --base=/Portfolio/",
+    "preview:pages": "vite preview --base=/Portfolio/",
+    "test:pages": "playwright test --config=playwright.pages.config.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "sharp": "^0.35.5",
+    "vite": "^6.0.0"
+  }
+}
