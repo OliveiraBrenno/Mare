@@ -12,8 +12,8 @@
     "test": "playwright test",
     "optimize:images": "node scripts/optimize-images.mjs",
     "generate:menu": "node scripts/generate-menu.mjs",
-    "build:pages": "vite build --base=/Portfolio/",
-    "preview:pages": "vite preview --base=/Portfolio/",
+    "build:pages": "vite build --base=/Mare/",
+    "preview:pages": "vite preview --base=/Mare/",
     "test:pages": "playwright test --config=playwright.pages.config.js"
   },
   "devDependencies": {

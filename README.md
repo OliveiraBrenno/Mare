@@ -48,9 +48,9 @@ A imagem mestre de abertura corrigida é `assets/source/pesca.png`; a original p
 
 ## GitHub Pages
 
-Destino: https://oliveirabrenno.github.io/Portfolio/
+Destino: https://oliveirabrenno.github.io/Mare/
 
-O workflow `.github/workflows/deploy.yml` instala o lockfile com Node.js 24, verifica o lint, gera o build e publica `dist` quando a branch `main` recebe alterações. A origem do Pages deve ser **GitHub Actions**. As duas páginas são compiladas com o prefixo `/Portfolio/`; os links usam `%BASE_URL%` para também funcionar no servidor local.
+O workflow `.github/workflows/deploy.yml` instala o lockfile com Node.js 24, verifica o lint, gera o build e publica `dist` quando a branch `main` recebe alterações. A origem do Pages deve ser **GitHub Actions**. As duas páginas são compiladas com o prefixo `/Mare/`; os links usam `%BASE_URL%` para também funcionar no servidor local.
 
 ```sh
 npm run build:pages
