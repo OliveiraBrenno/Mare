@@ -313,3 +313,10 @@ Na home, o título entra como uma maré ascendente por clip-path; descrição e 
 A correção do Pão de Açúcar é feita sobre a fonte original: somente a região x1445–1672, y315–540 é composta a partir da edição gerada; fora dela, os pixels RGB do master PNG são idênticos aos da fonte JPEG decodificada. Os WebP de entrega são derivados comprimidos desse master.
 
 A ação “Descubra essa jornada” é filha direta do hero, posicionada no rodapé da cena com bottom:64px, recuo lateral de 8% (7% no celular) e largura limitada ao viewport. O padding inferior de 144px (156px no celular) reserva espaço para a ação, inclusive com texto ampliado.
+
+
+## Refinamento técnico após auditoria — 06/11/2026
+
+A indicação “Role para mergulhar” usa papel claro no desktop e navy no celular, sem painel. Texto funcional de pratos e catálogo cresce; a marca do catálogo pode ocupar a largura necessária com texto ampliado. A reserva rejeita nome só de espaços e invalida a prévia ao editar. O indicador da história é vertical também no mobile e mantém a ordem As pessoas, O mar, A cozinha, O sabor.
+
+Relatório, evidências e limites em AUDIT.md. As decisões desta seção prevalecem sobre as descrições históricas correspondentes.

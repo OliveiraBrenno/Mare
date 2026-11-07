@@ -308,6 +308,10 @@ function minimumDate() {
     .toISOString()
     .slice(0, 10);
 }
+const reservationForm = document.querySelector('#reservation-form');
+const reservationName = reservationForm.elements.nome;
+reservationName.addEventListener('input', () => reservationName.setCustomValidity(reservationName.value.trim() ? '' : 'Informe seu nome.'));
+reservationForm.addEventListener('input', () => { document.querySelector('#form-message').textContent = ''; });
 dateInput.min = minimumDate();
 dateInput.addEventListener("focus", () => {
   dateInput.min = minimumDate();
@@ -318,6 +322,7 @@ document
     event.preventDefault();
     const form = event.currentTarget;
     dateInput.min = minimumDate();
+    reservationName.setCustomValidity(reservationName.value.trim() ? '' : 'Informe seu nome.');
     if (!form.reportValidity()) return;
     const data = new FormData(form);
     const date = new Intl.DateTimeFormat("pt-BR", {

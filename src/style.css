@@ -1732,3 +1732,28 @@ h2,
 }
 
 .visit-demo {background:var(--cream);color:var(--navy);padding:72px max(6vw,24px);display:grid;grid-template-columns:1fr 1fr;gap:48px}.visit-demo h2{font-size:clamp(32px,4vw,52px);line-height:1.1}.visit-demo h3{font-size:28px}.visit-demo p{line-height:1.8;margin:24px 0}.visit-demo small{display:block;margin-top:14px}.visit-demo button:disabled{cursor:default;opacity:.65}@media(max-width:700px){.visit-demo{grid-template-columns:1fr}}
+
+/* Auditoria: legibilidade e controles sem alterar as superfícies fotográficas. */
+.skip{min-height:44px;transform:translateY(-200%);top:0}.skip:focus{transform:none}
+.menu-card h3,.menu-card p,.menu-card strong,.menu-item h3{font-size:14px}
+.story-progress{font-size:12px}
+.catalog-header .brand{width:max-content;max-width:100%}
+.catalog-header .brand>small{overflow-wrap:anywhere}
+.catalog-search input{font-size:16px}
+.catalog-dish p{font-size:14px}
+.category-filter,.catalog-count,.catalog-search>label,.catalog-disclaimer,.category-filter span{font-size:14px}
+.catalog-close h2,.dish-heading h3{overflow-wrap:anywhere;min-width:0}
+@media(max-width:600px){
+ .catalog-header .header{flex-wrap:wrap;gap:20px}
+ .catalog-header .brand{flex:0 1 auto}
+ .dish-heading{flex-wrap:wrap;gap:8px 16px}
+ .story-progress{font-size:12px}
+ input,select{font-size:16px}
+ .hero-description,.kitchen-content p,.menu-intro p,.reservation-copy>p:not(.spaced){font-size:14px}
+}
+.menu-item p,.menu-item .price{font-size:14px}
+.header .outline-button,.gold-button,.text-button{font-size:12px}
+.fiction-note,.visit-demo small{font-size:12px}
+.scroll-cue{color:var(--cream);font-weight:700}
+p{text-wrap:pretty}
+@media(max-width:600px){.scroll-cue{color:var(--navy)}}
