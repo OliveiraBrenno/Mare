@@ -11,6 +11,32 @@ const backWave = document.querySelector(".wave-back");
 const rayOne = document.querySelector(".ray-one");
 const rayTwo = document.querySelector(".ray-two");
 const storySteps = [...document.querySelectorAll(".story-progress span")];
+const storyIndicator = document.querySelector(".story-progress");
+const mobileStory = window.matchMedia("(max-width: 600px)");
+let activeStoryStep = -1;
+function syncStoryProgress() {
+  const bounds = ocean.getBoundingClientRect();
+  if (!bounds.height || !storySteps.length) return;
+  // The viewport's reading line crosses the scene from its top to its bottom.
+  // This keeps the final phase from activating before most of the scene is read.
+  let progress = (window.innerHeight * 0.5 - bounds.top) / bounds.height;
+  if (mobileStory.matches && storyIndicator) {
+    // On mobile the indicator sits below the copy, so measure its visible
+    // passage through the viewport instead of advancing while it is offscreen.
+    const indicator = storyIndicator.getBoundingClientRect();
+    const visibleTravel = window.innerHeight - indicator.height;
+    if (visibleTravel > 0) progress = (window.innerHeight - indicator.bottom) / visibleTravel;
+  }
+  progress = clamp(progress);
+  const active = Math.min(storySteps.length - 1, Math.floor(progress * storySteps.length));
+  if (active === activeStoryStep) return;
+  activeStoryStep = active;
+  storySteps.forEach((step, index) => {
+    step.classList.toggle("active", index === active);
+    if (index === active) step.setAttribute("aria-current", "step");
+    else step.removeAttribute("aria-current");
+  });
+}
 const particles = Array.from({ length: 28 }, (_, index) => ({
   x: ((index * 97) % 101) / 100,
   y: ((index * 37) % 101) / 100,
@@ -41,6 +67,7 @@ function scrub(selector, keyframes, section, start = 0, end = 1) {
 }
 function updateScroll() {
   scrollFrame = 0;
+  syncStoryProgress();
   if (!motionEnabled() || document.hidden) return;
   // Read stable containers first, then apply all animation and state writes.
   const viewport = window.innerHeight;
@@ -50,7 +77,6 @@ function updateScroll() {
       section.getBoundingClientRect(),
     ]),
   );
-  const oceanBounds = sections.get(ocean);
   const updates = animations.map((item) => {
     const rect = sections.get(item.section);
     const progress = clamp((viewport - rect.top) / (viewport + rect.height));
@@ -65,21 +91,10 @@ function updateScroll() {
       item.currentTime = time;
     }
   });
-  if (oceanBounds) {
-    const index = Math.min(
-      3,
-      Math.floor(
-        clamp((viewport - oceanBounds.top) / (viewport + oceanBounds.height)) *
-          4,
-      ),
-    );
-    storySteps.forEach((element, i) =>
-      element.classList.toggle("active", i === index),
-    );
-  }
+
 }
 function requestScrollUpdate() {
-  if (!scrollFrame && motionEnabled() && !document.hidden)
+  if (!scrollFrame && !document.hidden)
     scrollFrame = requestAnimationFrame(updateScroll);
 }
 function wavePath(time, amplitude, baseline) {
@@ -241,6 +256,7 @@ function configureMotion() {
     context?.clearRect(0, 0, width, height);
   }
   syncAmbient();
+  requestScrollUpdate();
 }
 const visibilityObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -264,6 +280,7 @@ configureMotion();
 window.addEventListener("scroll", requestScrollUpdate, { passive: true });
 window.addEventListener("resize", resizeCanvas, { passive: true });
 window.addEventListener("load", requestScrollUpdate);
+mobileStory.addEventListener("change", requestScrollUpdate);
 document.fonts.ready.then(requestScrollUpdate);
 document.addEventListener("visibilitychange", () => {
   syncAmbient();

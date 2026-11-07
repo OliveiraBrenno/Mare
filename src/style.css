@@ -1309,28 +1309,28 @@ h2,
   }
   .story-progress {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    width: 100%;
-    padding: 20px 0 0;
-    gap: 12px;
-    font-size: 10px;
+    grid-template-columns: minmax(0, 1fr);
+    width: max-content;
+    padding: 12px 0 12px 28px;
+    gap: 22px;
+    font-size: 11px;
     letter-spacing: 0.1em;
     align-self: end;
   }
   .story-progress:before {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: auto;
-    width: auto;
-    height: 1px;
+    left: 8px;
+    right: auto;
+    top: 19px;
+    bottom: 19px;
+    width: 1px;
+    height: auto;
   }
   .story-progress span {
     overflow-wrap: anywhere;
   }
   .story-progress span:before {
-    top: -22px;
-    left: 0;
+    top: 6px;
+    left: -22px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -1730,3 +1730,5 @@ h2,
     bottom: 64px;
   }
 }
+
+.visit-demo {background:var(--cream);color:var(--navy);padding:72px max(6vw,24px);display:grid;grid-template-columns:1fr 1fr;gap:48px}.visit-demo h2{font-size:clamp(32px,4vw,52px);line-height:1.1}.visit-demo h3{font-size:28px}.visit-demo p{line-height:1.8;margin:24px 0}.visit-demo small{display:block;margin-top:14px}.visit-demo button:disabled{cursor:default;opacity:.65}@media(max-width:700px){.visit-demo{grid-template-columns:1fr}}

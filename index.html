@@ -38,8 +38,8 @@
       <section class="hero" id="inicio" aria-labelledby="titulo">
         <img
           class="hero-image scene-image"
-          src="/pesca-1600.webp"
-          srcset="/pesca-800.webp 800w, /pesca-1600.webp 1600w"
+          src="/pesca-montanhas-v2-1600.webp"
+          srcset="/pesca-montanhas-v2-800.webp 800w, /pesca-montanhas-v2-1600.webp 1600w"
           sizes="100vw"
           alt=""
           width="1672"
@@ -124,9 +124,9 @@
             <svg class="arrow"><use href="#arrow" /></svg
           ></a>
         </div>
-        <div class="story-progress" aria-hidden="true">
-          <span class="active">O mar</span><span>As pessoas</span
-          ><span>A cozinha</span><span>O sabor</span>
+
+        <div class="story-progress" role="list" aria-label="Etapas da história do oceano">
+          <span role="listitem" class="active" aria-current="step">As pessoas</span><span role="listitem">O mar</span><span role="listitem">A cozinha</span><span role="listitem">O sabor</span>
         </div>
         <img
           class="coral coral-ocean"
@@ -383,6 +383,10 @@
         </form>
       </section>
     </main>
+    <section class="visit-demo" aria-labelledby="visit-title">
+      <div><h2 id="visit-title">Seu próximo encontro<br />é com o mar.</h2><p>Reservas pelo WhatsApp</p><button class="gold-button" type="button" disabled>Reservar pelo WhatsApp</button><small>Integração desativada nesta demonstração.</small></div>
+      <div><h3>À beira de um lugar imaginário.</h3><p>Rua das Marés, 28 · Vila da Enseada<br />Costa Serena · endereço fictício</p><button class="gold-button" type="button" disabled>Ver localização no Maps</button><small>Localização ilustrativa. Integração desativada.</small></div>
+    </section>
     <footer>
       <div class="footer-top">
         <a class="brand" href="#inicio" aria-label="Maré, início"
